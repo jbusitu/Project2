@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs')%>
+    <div class="container">
+        <form action="/events" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter event title">
+            </div>
+            <div class="form-group">
+                <label for="hostName">Host:</label>
+                <input type="text" id="hostName" name="hostName" placeholder="Enter host name">
+            </div>
+            <div class="form-group">
+                <label for="startDateTime">Start:</label>
+                <input type="datetime-local" id="startDateTime" name="startDateTime">
+            </div>
+            <div class="form-group">
+                <label for="endDateTime">End:</label>
+                <input type="datetime-local" id="endDateTime" name="endDateTime">
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="" disabled selected>Select a Category</option>
+                    <option value="music">Sports</option>
+                    <option value="sports">Employment</option>
+                    <option value="art">Art</option>
+                    <option value="food">Games</option>
+                    <option value="food">Cooking</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="details">Details:</label>
+                <textarea id="details" name="details" rows="4" cols="72" placeholder="Enter event description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <button type="submit" class="btn-submit">Create Event</button>    
+        </form>
+    </div>
+    <%- include('../partials/footer.ejs')%>
